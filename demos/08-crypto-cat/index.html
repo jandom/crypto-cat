@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="description" content="DBMON REACT" />
+  <meta charset="utf-8">
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <link href="../styles.css" rel="stylesheet" type="text/css" />
+  <title>cryptocat (react)</title>
+  <style>
+	img.picture {
+		border-radius: 50%;
+		border: 2px solid #FFF;
+	    display: block;
+	    max-width:  5em;
+	    max-height: 5em;
+	    width: auto;
+	    height: auto;
+	}  
+  </style>
+</head>
+<body>
+  <div id="cryptocat"></div>
+
+
+  <script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/aes.js"></script>
+
+  <script>
+
+  	var message1 = { "picture": "http://walllebi.tk/wp-content/uploads/samwell-tarly-4.jpg", "name": "Samwell Tarly",  "text":"Hello. Ser Alliser said I'm to be your new watch partner. I should warn you, I don't see all that well. " };
+  	var message2 = { "picture": "http://randomcelebs.com/wp-content/uploads/2015/03/Jon-Snow-4.jpg", "name": "Jon Snow", "text":"Come stand by the fire. It's warmer. " };
+  	var message3 = { "picture": "http://walllebi.tk/wp-content/uploads/samwell-tarly-4.jpg", "name": "Samwell Tarly" , "text":"No, that's all right, I'm fine. " };
+  	var message4 = { "picture": "http://randomcelebs.com/wp-content/uploads/2015/03/Jon-Snow-4.jpg", "name": "Jon Snow", "text":"You're not. You're freezing. " };
+
+  	var messages = [
+  		CryptoJS.AES.encrypt(JSON.stringify(message1), "Sam"),
+  		CryptoJS.AES.encrypt(JSON.stringify(message2), "Jon"),
+  		CryptoJS.AES.encrypt(JSON.stringify(message3), "Sam"),
+  		CryptoJS.AES.encrypt(JSON.stringify(message4), "Jon"),
+  	];
+
+  	
+  </script>
+
+  <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+  <script src="http://fb.me/react-0.13.3.min.js"></script>
+  <script src="http://fb.me/JSXTransformer-0.13.3.js"></script>
+
+
+  <script src="app.js" type="text/jsx"></script>
+
+
+
+
+</body>
+</html>
